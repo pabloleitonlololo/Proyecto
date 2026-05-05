@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 model = YOLO("yolov8n.pt")
 
-objetos_disponibles = ["carro", "bicicleta", "semaforo", "persona"]
+objetos_disponibles = ["car", "bicycle", "traffic light", "person"]
 
 print("1. Detectar todos")
 print("2. Detectar solo uno")
@@ -15,10 +15,10 @@ opcion = input("Seleccionar una opción: ")
 if opcion == "1":
     objetos_seleccionados = objetos_disponibles
 elif opcion == "2":
-    objeto = input("Ingrese objeto (carro, bicicleta, semaforo, persona): ")
+    objeto = input("Ingrese objeto (car, bicycle, traffic light, perso): ")
     objetos_seleccionados = [objeto]
 elif opcion == "3":
-    objetos = input("Ingrese objetos separados por coma (carro,bicicleta,persona): ")
+    objetos = input("Ingrese objetos separados por coma (car,bicycle,person): ")
     objetos_seleccionados = [o.strip() for o in objetos.split(",")]
 else:
     exit()
