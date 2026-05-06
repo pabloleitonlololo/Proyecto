@@ -6,9 +6,9 @@ model = YOLO("yolov8n.pt")
 
 colores = {
     "car": (255, 0, 255),
-    "bicycle": (255, 0, 0),
+    "bicycle": (0, 0, 255),
     "traffic light": (0, 165, 255),
-    "person": (0, 0, 255)
+    "person": (255, 0, 0)
 }
 
 objetos_disponibles = ["car", "bicycle", "traffic light", "person"]
